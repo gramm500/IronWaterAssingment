@@ -6,7 +6,14 @@ Array.prototype.customReverse = function () {
 	}
 
 	return output;
-}
+};
+
+Array.prototype.customReverseTwo = function () {
+	self = this;
+	return this.map(function (item, idx) {
+		return self[self.length - 1 - idx];
+	});
+};
 
 function createRandArray(arrayLength) {
 	return new Array(arrayLength).fill(0).map(function (item) {
@@ -14,9 +21,10 @@ function createRandArray(arrayLength) {
 	});
 }
 
-var makeArray = createRandArray(10);
-makeArray.customReverse()
-
+var makeArray = createRandArray(5);
+makeArray.customReverseTwo();
+console.log(makeArray.customReverseTwo());
+console.log(makeArray);
 // --Frist assignment //
 
 // Second assingment //
