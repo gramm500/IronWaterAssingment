@@ -9,6 +9,10 @@ Array.prototype.customReverse = function () {
 };
 
 Array.prototype.customReverseTwo = function () {
+	return this.map((item, idx) => this[this.length - 1 - idx]);
+};
+
+Array.prototype.customReverseThree = function () {
 	self = this;
 	return this.map(function (item, idx) {
 		return self[self.length - 1 - idx];
@@ -23,8 +27,6 @@ function createRandArray(arrayLength) {
 
 var makeArray = createRandArray(5);
 makeArray.customReverseTwo();
-console.log(makeArray.customReverseTwo());
-console.log(makeArray);
 // --Frist assignment //
 
 // Second assingment //
